@@ -1,0 +1,25 @@
+RNGversion("3.5.1")
+set.seed(42)
+cc <- complete(DirMap, 332:1)
+use <- sample(332,10)
+print(cc[use, "nobs"])
+
+
+
+
+cr <- corr(DirMap)
+cr <- sort(cr)
+RNGversion("3.5.1")
+set.seed(868)
+out <- round(cr[sample(length(cr), 5)], 4)
+print(out)
+
+
+
+cr <- corr(DirMap, 129)                
+cr <- sort(cr)                
+n <- length(cr)    
+RNGversion("3.5.1")
+set.seed(197)                
+out <- c(n, round(cr[sample(n, 5)], 4))
+print(out)
